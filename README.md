@@ -1,6 +1,6 @@
 # Chrome MV3 Extension - React + Vite
 
-这是一个使用 **React 18 + TypeScript + Vite** 构建的 **Chrome 扩展插件（Manifest V3）** 项目，支持 Popup、Options、Background、Content Script、Side Panel、DevTools 面板等功能模块。
+这是一个使用 **React 18 + TypeScript + Vite + Antd** 构建的 **Chrome 扩展插件（Manifest V3）** 项目模板，支持 Popup、Options、Background、Content Script、Side Panel、DevTools 面板等功能模块。
 
 ## 📦 特性
 
