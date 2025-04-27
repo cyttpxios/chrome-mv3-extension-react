@@ -14,7 +14,10 @@ export default defineConfig(({ command, mode }) => {
   return {
     root: '.',
     define: {
-
+      //在页面中使用时，使用 import.meta.env.VITE_IS_DEV 来获取是否为开发环境
+      'import.meta.env.VITE_IS_DEV': isDev, 
+      //在页面中使用时，使用 import.meta.env.VITE_API_URL 来获取 env 中的 API 地址
+      'import.meta.env.VITE_API_URL': JSON.stringify(env.VITE_API_URL),
     },
     plugins: [react(), crx({ manifest }),],
   }
