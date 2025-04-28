@@ -3,7 +3,8 @@
 
 
 import ReactDOM from 'react-dom/client'
-import Pop from './Pop'
+import Pop from './Pop';
+import '../helpers/i18n'
 
 
 
