@@ -20,6 +20,11 @@ export default defineConfig(({ command, mode }) => {
       'import.meta.env.VITE_API_URL': JSON.stringify(env.VITE_API_URL),
     },
     plugins: [react(), crx({ manifest }),],
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
+    },
     build: {
       outDir: path.resolve(__dirname, 'dist'),
       minify: isDev ? false : 'terser',
