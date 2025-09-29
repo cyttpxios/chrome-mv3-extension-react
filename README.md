@@ -1,17 +1,19 @@
-# Chrome MV3 Extension - React + Vite
+# 跨浏览器扩展 - React + Vite
 
-这是一个使用 **React 18 + TypeScript + Vite + Antd** 构建的 **Chrome 扩展插件（Manifest V3）** 项目模板，支持 Popup、Options、Background、Content Script、Side Panel、DevTools 面板等功能模块。
+这是一个使用 **React 18 + TypeScript + Vite + Antd** 构建的 **跨浏览器扩展插件** 项目模板，同时支持 **Chrome (Manifest V3)** 和 **Firefox (Manifest V2)**，包含 Popup、Options、Background、Content Script、Side Panel、DevTools 面板等功能模块。
 
 ## 📦 特性
 
-- 🌟 支持 MV3 架构
+- 🌟 支持 Chrome MV3 和 Firefox MV2 架构
+- 🦊 跨浏览器兼容，一套代码支持多个浏览器
 - ⚡ 使用 Vite 构建，极速开发
 - 💡 使用 React + TypeScript 编写各页面
 - 📜 支持国际化（_locales）
 - 📁 项目结构清晰，模块职责明确
-- 🛠️ 支持 SidePanel、DevTools 面板开发
+- 🛠️ 支持 SidePanel、DevTools 面板开发（Chrome）
 - 🔒 使用 `.env` 管理多环境配置
 - ✅ 内置 ESLint + TypeScript 校验
+- 🔧 自动浏览器检测和API兼容
 
 ## 📁 项目结构
 
@@ -20,14 +22,52 @@
 ## 🧪 本地开发
 
 ```bash
+# 安装依赖
 pnpm install
+
+# Chrome开发
 pnpm dev
+
+# Firefox开发  
+pnpm dev:firefox
+
+# 构建Chrome版本
 pnpm build
+
+# 构建Firefox版本
+pnpm build:firefox
+
+# 构建所有版本
+pnpm build:all
 ```
+
 ## 🧩 加载插件
-1. 打开 chrome://extensions/
+
+### Chrome
+1. 打开 `chrome://extensions/`
 2. 开启右上角「开发者模式」
-3. 点击「加载已解压的扩展程序」，选择 dist/ 文件夹
+3. 点击「加载已解压的扩展程序」，选择 `dist/` 文件夹
+
+### Firefox
+1. 打开 `about:debugging`
+2. 点击「此Firefox」
+3. 点击「临时载入附加组件」
+4. 选择 `dist-firefox/` 目录中的 `manifest.json` 文件
+
+## 🦊 浏览器兼容性
+
+| 功能 | Chrome | Firefox | 说明 |
+|------|--------|---------|------|
+| Popup | ✅ | ✅ | 弹出窗口 |
+| Options | ✅ | ✅ | 选项页面 |
+| Background | ✅ | ✅ | 背景脚本 |
+| Content Script | ✅ | ✅ | 内容脚本 |
+| Side Panel | ✅ | ❌ | Chrome专有功能 |
+| DevTools | ✅ | ✅ | 开发者工具 |
+| Storage API | ✅ | ✅ | 存储API |
+| Tabs API | ✅ | ✅ | 标签页API |
+
+详细构建说明请查看 [BUILD_GUIDE.md](./BUILD_GUIDE.md)
 
 ## 📁 项目目录结构说明（React + Vite + Chrome MV3）
 
