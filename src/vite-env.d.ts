@@ -16,8 +16,10 @@ declare namespace browser {
   }
   
   namespace tabs {
+    function query(queryInfo: any): Promise<any[]>;
     function query(queryInfo: any, callback: (tabs: any[]) => void): void;
     function create(createProperties: any, callback?: (tab: any) => void): void;
+    function sendMessage(tabId: number, message: any, callback?: (response: any) => void): void;
   }
   
   namespace storage {
@@ -26,6 +28,27 @@ declare namespace browser {
       function set(items: object, callback?: () => void): void;
       function remove(keys: string | string[], callback?: () => void): void;
     }
+  }
+
+  namespace contextMenus {
+    function create(createProperties: any): void;
+    const onClicked: {
+      addListener(callback: (info: any, tab: any) => void): void;
+    };
+  }
+
+  namespace commands {
+    const onCommand: {
+      addListener(callback: (command: string) => void): void;
+    };
+  }
+}
+
+// Chrome API 类型扩展
+declare namespace chrome {
+  namespace tabs {
+    function query(queryInfo: any): Promise<any[]>;
+    function sendMessage(tabId: number, message: any): Promise<any>;
   }
 }
 

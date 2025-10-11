@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:firefox": "cross-env BROWSER=firefox vite",
+    "dev:firefox": "vite --config vite.config.firefox.ts",
     "build": "tsc -b && vite build",
-    "build:firefox": "cross-env BROWSER=firefox tsc -b && cross-env BROWSER=firefox vite build",
+    "build:firefox": "tsc -b && vite build --config vite.config.firefox.ts",
     "build:all": "npm run build && npm run build:firefox",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

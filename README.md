@@ -1,9 +1,22 @@
-# 跨浏览器扩展 - React + Vite
+# 网页划词翻译插件
 
-这是一个使用 **React 18 + TypeScript + Vite + Antd** 构建的 **跨浏览器扩展插件** 项目模板，同时支持 **Chrome (Manifest V3)** 和 **Firefox (Manifest V2)**，包含 Popup、Options、Background、Content Script、Side Panel、DevTools 面板等功能模块。
+一个功能强大的浏览器插件，支持网页文本的快速划词翻译。选中任意文本即可获得即时翻译结果。
+
+基于 **React 18 + TypeScript + Vite + Antd** 构建，同时支持 **Chrome (Manifest V3)** 和 **Firefox (Manifest V2)**。
 
 ## 📦 特性
 
+### 🌟 翻译功能
+- 🖱️ **划词翻译**: 选中文本即可快速翻译
+- 🤖 **AI翻译**: 集成GLM大语言模型，提供高质量翻译
+- 🌍 **多语言支持**: 支持中英日韩法德俄等15种语言
+- ⚡ **即时显示**: 翻译结果实时显示在选择位置附近
+- 🔄 **流式翻译**: GLM AI支持流式输出，翻译过程可见
+- 🎯 **智能检测**: 自动检测源语言类型
+- ⌨️ **快捷键支持**: Ctrl+Shift+T 快速翻译选中文本
+- 🖱️ **右键菜单**: 右键菜单快速翻译
+
+### 🛠️ 技术特性
 - 🌟 支持 Chrome MV3 和 Firefox MV2 架构
 - 🦊 跨浏览器兼容，一套代码支持多个浏览器
 - ⚡ 使用 Vite 构建，极速开发
